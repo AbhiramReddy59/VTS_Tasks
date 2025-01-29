@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.lang {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3366cc;
+    text-align: center;
+}
+
+.lang span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.search-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #3366cc;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.footer-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #3366cc;
+}
