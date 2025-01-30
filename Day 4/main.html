@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronized studio</title>
+    <style>
+        body {
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .moving-text-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .moving-text {
+            display: inline-block;
+            padding-left: 100%; 
+            animation: move-text 20s linear infinite;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .yellow {
+            color: yellow; 
+        }
+
+        .moving-text span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        @keyframes move-text {
+        0% {
+            transform: translateX(-100%); 
+        }
+        100% {
+            transform: translateX(0); 
+        }
+    }
+    .right-text {
+            padding-top: 5%;
+            position: absolute;
+            right: 70px;
+            top: 10%;
+            font-size: 120px;
+            font-weight: bold;
+            color: #fff; 
+            white-space: nowrap;
+        }
+
+        .left-text {
+            
+            position: absolute;
+            left: 100px;
+            top: 45%;
+            font-size: 100px; 
+            font-weight: bold;
+            color: yellow;
+            white-space: nowrap;
+        }
+
+        .center-text {
+            
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            color: #fff; 
+            position: absolute;
+            top: 70%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        }
+        .center-text1{
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            color: #fff; 
+            position: absolute;
+            top: 90%; 
+            left: 70%; 
+            transform: translate(-50%, -50%); 
+        }
+        .logo {
+            position: absolute;
+            left: 40px;
+            top: 10%;
+            width: 20%; 
+            height: 15%;
+        }
+
+        .image-container {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            width: 200px; 
+            height: auto;
+        }
+        .left-image {
+            position: absolute;
+            left: 0;
+            top: 85%; /* Vertically center the image */
+            transform: translateY(-50%); /* To center the image vertically */
+            width: 200px; /* Adjust the width of the image */
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="moving-text-container">
+        <div class="moving-text">
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span> 
+            <span class="bold">archivesynchronized</span> 
+            <span class="yellow">archivesynchronized</span>
+        </div>
+    </div>
+    <img src="left.png" alt="Logo" class="logo" />
+    <div class="right-text">
+        Synchronized
+    </div>
+
+    <div class="left-text">
+        Digital
+    </div>
+
+    <div class="center-text">
+        <div>Creative</div>
+        
+    </div>
+    <div class="center-text1">
+        <div>Studio</div>
+    </div>
+
+    <div class="image-container">
+        <img src="sun.svg" alt="Image" width="100%" />
+    </div>
+    <img src="hand.svg" alt="Image" class="left-image" />
+</body>
+</html>
