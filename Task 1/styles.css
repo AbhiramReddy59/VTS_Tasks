@@ -304,7 +304,7 @@ section {
     color: var(--card-text-color);
 }
 
-/* Responsive Design for Smaller Screens */
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
