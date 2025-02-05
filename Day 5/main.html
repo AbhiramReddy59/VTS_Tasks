@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightcyan;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #f44336;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 300px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .alert-box {
+            margin: 20px;
+            padding: 15px;
+            background-color: #f44336;
+            color: white;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .alert-box.show {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Welcome to Event Handlers Class</h1>
+        
+        <label for="fname">First Name: </label>
+        <input type="text" class="fullname" onchange="onChangeHandler(event)"><br>
+        
+        <label for="fullname">Full Name: </label>
+        <input type="text" class="fullname" onchange="onChangeHandler(event)"><br>
+
+        <div class="buttons">
+            <button onclick="this.innerHTML = Date()">What is the Date and Time Now ></button>
+            <button onclick="showDateTime()">What is the Date and Time Now ></button>
+        </div>
+
+        <h2 id="date" onmouseover="alertMouseOver()">Hover over me to see an alert!</h2>
+
+        <p onmouseout="alertOnMouseOut()">Move your mouse away from this text</p>
+
+        <label for="key-input">Press a key: </label>
+        <input type="text" id="key-input" onkeydown="handleKeyDown(event)" placeholder="Press any key">
+
+        <div class="alert-box" id="alertBox"></div>
+    </div>
+
+    <script>
+        function showDateTime() {
+            document.getElementById('date').innerHTML = Date();
+        }
+
+        function alertMouseOver() {
+            alert("This is on Mouse Over..!!");
+        }
+
+        function alertOnMouseOut() {
+            alert("You moved the mouse away!");
+        }
+
+        function handleKeyDown(event) {
+            alert("You pressed the key with code: " + event.keyCode);
+        }
+
+        function onChangeHandler(event) {
+            if (event.target.classList.contains("fullname")) {
+                event.target.value = event.target.value.toUpperCase();
+                event.target.style.color = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
