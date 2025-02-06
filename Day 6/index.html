@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Event Handlers Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Event Handlers Playground</h1>
+            <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="light">🌞</span>
+                <span class="dark">🌙</span>
+            </button>
+        </header>
+
+        <main>
+            <section class="event-logger">
+                <div class="section-header">
+                    <h2>Event Log Monitor</h2>
+                    <div class="logger-controls">
+                        <button id="clear-log" class="clear-btn">Clear Log</button>
+                        <button id="pause-log" class="pause-btn">Pause Logging</button>
+                    </div>
+                </div>
+                <div id="event-log" class="log-container"></div>
+            </section>
+
+            <section class="interaction-section">
+                <div class="card mouse-events">
+                    <h3>Mouse Interactions</h3>
+                    <div class="mouse-area" id="mouse-tracker">
+                        <button id="click-btn" class="primary-btn">Single Click</button>
+                        <button id="dblclick-btn" class="secondary-btn">Double Click</button>
+                        <div class="mouse-move-area">Move mouse here</div>
+                    </div>
+                </div>
+
+                <div class="card keyboard-events">
+                    <h3>Keyboard Events</h3>
+                    <input type="text" id="text-input" placeholder="Type here to test keyboard events...">
+                    <div class="key-info">Last Key Pressed: <span id="key-display">None</span></div>
+                </div>
+
+              
+                <div class="card form-events">
+                    <h3>Form Interactions</h3>
+                    <form id="event-form">
+                        <input type="text" id="form-input" placeholder="Enter text" required>
+                        <select id="form-select">
+                            <option value="">Select an option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                        <button type="submit" class="submit-btn">Submit Form</button>
+                    </form>
+                </div>
+
+                <div class="card clipboard-events">
+                    <h3>Clipboard Operations</h3>
+                    <textarea id="clipboard-text" placeholder="Try copy/paste operations here..."></textarea>
+                    <div class="clipboard-info">Last Operation: <span id="clipboard-status">None</span></div>
+                </div>
+
+                <div class="card drag-drop-events">
+                    <h3>Drag & Drop Interface</h3>
+                    <div id="drag-container">
+                        <div id="draggable" draggable="true">
+                            <span>📦 Drag this item</span>
+                        </div>
+                        <div id="drop-zone">
+                            <span>Drop Zone</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card media-events">
+                    <h3>Media Controls</h3>
+                    <div class="video-container">
+                        <video id="video" controls>
+                            <source src="sample.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="media-controls">
+                        <button id="play-btn" class="primary-btn">Play</button>
+                        <button id="pause-btn" class="secondary-btn">Pause</button>
+                        <div class="media-info">Status: <span id="media-status">Stopped</span></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

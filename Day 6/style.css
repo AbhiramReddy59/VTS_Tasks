@@ -1,0 +1,282 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #e91e63;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --error-color: #e74c3c;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #2c3e50;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-logger {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.log-container {
+    height: 200px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+}
+
+.log-container p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: var(--card-background);
+    border-left: 4px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.secondary-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.clear-btn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.theme-toggle {
+    padding: 0.75rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-background);
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle .light,
+.theme-toggle .dark {
+    display: none;
+}
+
+body:not(.dark-mode) .theme-toggle .light {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .dark {
+    display: block;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+#drag-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#draggable {
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: move;
+    text-align: center;
+}
+
+#drop-zone {
+    padding: 2rem;
+    border: 2px dashed #ddd;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+#drop-zone.drag-over {
+    background: rgba(74, 144, 226, 0.1);
+    border-color: var(--primary-color);
+}
+
+video {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.dark-mode {
+    --background-color: #1a1a1a;
+    --card-background: #2d2d2d;
+    --text-color: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background: #333;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode #drop-zone {
+    border-color: #666;
+    background: #333;
+}
+
+.dark-mode .log-container {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+.dark-mode .log-container p {
+    background: #2d2d2d;
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #drag-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: var(--border-radius);
+    background: #000;
+}
+
+.media-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.media-controls button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.media-controls .primary-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.media-controls .secondary-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.media-controls button:hover {
+    opacity: 0.9;
+}
